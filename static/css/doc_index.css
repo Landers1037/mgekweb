@@ -1,0 +1,108 @@
+    body{
+        background: #dddddd;
+    }
+    .home-header{
+        background: #465158;
+        padding: 40px 0 40px 0;
+        color: #fff;
+        text-align: center;
+    }
+    .wrapper{
+        position: relative;
+        margin: 0 auto;
+        padding: 0 auto;
+        text-align: left;
+        width: 80%;
+    }
+    @media screen and (max-width: 500px){
+        .wrapper{
+            width: 100%;
+        }
+    }
+    .home-title{
+        padding: 10px 0 10px 100px;
+        background: url("/title_80x80.png") top left no-repeat;
+        text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+
+    }
+    .home-title h1 a{
+        text-decoration: none;
+        color: white;
+    }
+    #top{
+        padding: 10px 5px 10px 5px;
+        width: 300px;
+        margin: 15px auto 10px auto;
+        border-radius: 5px;
+        background-color: #465158;
+        color: white;
+        cursor: pointer;
+    }
+
+    #footer{
+        height: 200px;
+        width: 100%;
+        margin-top: 30px;
+        padding: 30px 0 10px 0;
+        background: #465158;
+        color: #BCC1C3;
+        text-align: left;
+    }
+    #footer a{
+        color: #BCC1C3;
+        text-decoration: none;
+        font-size: 2rem;
+    }
+    #footer a:hover{
+        color: white;
+        text-decoration: none;
+    }
+    #footer i{
+        font-size: 1.3rem;
+    }
+    .list-group{
+        width: 70%;
+        margin: 0 auto;
+        background: #c0c0c0;
+        border-radius: 6px;
+        padding: 8px 8px 8px 8px!important;
+
+    }
+    @media screen and (max-width: 550px){
+        .list-group{
+            width: 100%;
+        }
+    }
+    .list-group-item p{
+        display: inline-block;
+        font-size: 1.2rem;
+        font-weight: 600;
+
+    }
+    .list-group-item a{
+        display: inline-block;
+        float: right;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-right: 20px;
+        padding: 2px 15px 2px 15px;
+        color: #465158;
+        background: #c0c0c0;
+        border-radius: 5px;
+        box-shadow: 0 1px 1px #465158;
+    }
+    .list-group-item a:hover{
+        text-decoration: none;
+        color: #465158;
+        background: #888888;
+    }
+    .list-group-item p i{
+        color: #888888;
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+    @media screen and (max-width: 500px){
+        .list-group-item a{
+            margin-right: 0;
+        }
+    }

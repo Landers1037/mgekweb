@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Kiyo</title>
+        <meta name="description" content="Kiyo, a proxy tool for out of world." />
+
+        <!--Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
+
+        <!--vendors styles-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+        <!-- Bootstrap CSS / Color Scheme -->
+        <link rel="icon" href="/kiyo.jpg">
+		<link rel="stylesheet" href="/css/indigo.css">
+    </head>
+    <style>
+        .row img{box-shadow: 0 0 10px 2px #dddddd;border: none!important;margin-bottom: 10px}
+        .list-group-item{width: 60%;margin: 0 auto}
+        @media (max-width: 500px) {
+            .list-group-item{width: 100%}
+        }
+    </style>
+    <body data-spy="scroll" data-target="#boom-navbar" data-offset="0">
+
+        <!--navigation-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top sticky-navigation" id="boom-navbar">
+            <a class="navbar-brand" href="#">
+                Kiyo
+            </a>
+            <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" 
+                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span data-feather="menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <a style="position: fixed;right: 40px" class="btn btn-danger page-scroll" href="http://hub.lrenj.top/download/kiyo.zip">
+                        Download
+                    </a>
+            </div>
+        </nav>
+
+        <!--hero header-->
+        <section class="py-6 py-md-0 bg-gradient" id="home">
+            <div class="container">
+                <div class="row vh-md-100">
+                    <div class="col-md-8 col-sm-10 my-auto mx-auto text-center">
+                        <h1 class="display-3 text-white">A Web UI Proxy tool</h1>
+                        <p class="lead text-light mb-5">Support socks5, shadowsocks, shadowsocksr, maybe vmess later</p>
+                        <a href="#start" class="btn btn-outline-light btn-lg">
+                            Get started now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about section -->
+        <section class="pt-6" id="start">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mx-auto text-center">
+                        <span class="text-muted large-sm">What's Kiyo</span>
+                        <h2 class="display-4">A webUI proxy tool</h2>
+                        <p class="lead" style="font-size: 15px">
+                           简单的二进制文件，注册到环境变量后即可随处使用，无需客户端使用浏览器管理你的全部代理服务。<br>
+                           可以下载匹配的shadowsocks服务或者直接使用编译完成的Kiyo客户端
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                        <img src="/store/kiyo/demo1.jpg" class="img-fluid d-block mx-auto" alt="demo"/>
+                        <img src="/store/kiyo/demo3.png" class="img-fluid d-block mx-auto" alt="demo"/>
+                        <img src="/store/kiyo/demo4.png" class="img-fluid d-block mx-auto" alt="demo"/>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-3 col-sm-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="icon-box">
+                                    <div class="icon-box-inner small-xs text-primary">
+                                        <span data-feather="layout" width="30" height="30"></span>
+                                    </div>
+                                </div>
+                                <h5 class="mt-0 mb-3">web UI</h5>
+                                使用web页面管理你的配置，简单高效<br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="icon-box">
+                                    <div class="icon-box-inner small-xs text-primary">
+                                        <span data-feather="monitor" width="30" height="30"></span>
+                                    </div>
+                                </div>
+                                <h5 class="mt-0 mb-3">响应式设计</h5>
+                                页面基于bootstrap4实现<br/>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="icon-box">
+                                    <div class="icon-box-inner small-xs text-primary">
+                                        <span data-feather="headphones" width="30" height="30"></span>
+                                    </div>
+                                </div>
+                                <h5 class="mt-0 mb-3">多协议合一</h5>
+                                支持ss/ssr/vmess/socks5多协议<br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="icon-box">
+                                    <div class="icon-box-inner small-xs text-primary">
+                                        <span data-feather="refresh-cw" width="30" height="30"></span>
+                                    </div>
+                                </div>
+                                <h5 class="mt-0 mb-3">错误报告</h5>
+                                所有的错误报告都会被记录在log中方便跟进调试<br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="list-group-item">
+            <span style="margin-right: 30px;display: inline-block;width: 140px">项目文档</span><a href="/kiyo.md">Kiyo</a><br>
+            <span style="margin-right: 30px;display: inline-block;width: 140px">Linux二进制文件</span><a href="http://hub.lrenj.top/download/kiyo">Kiyo for Linux</a><br>
+            <span style="margin-right: 30px;display: inline-block;width: 140px">Windows打包文件</span><a href="http://hub.lrenj.top/download/kiyo.zip">Kiyo for Windows</a><br>
+            <span style="margin-right: 30px;display: inline-block;width: 140px">ss配置文件</span><a href="http://hub.lrenj.top/download/local.json">local.json</a><br>
+            <span style="margin-right: 30px;display: inline-block;width: 140px">ssr配置文件</span><a href="http://hub.lrenj.top/download/ssr.json">ssr.json</a><br>
+            <span style="margin-right: 30px;display: inline-block;width: 140px">server配置文件</span><a href="http://hub.lrenj.top/download/server.json">server.json</a><br>
+            <span style="margin-right: 30px;display: inline-block;width: 140px">Proxifier</span><a href="http://hub.lrenj.top/download/proxifier.zip">Proxifier</a><br>
+        </div>
+
+        <hr class="mt-6" />
+
+        <!--footer / contact-->
+        <footer class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 my-auto text-center text-md-left">
+                        &copy;2019 Kiyo & Mgek.
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

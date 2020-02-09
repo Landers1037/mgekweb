@@ -1,0 +1,470 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-Hans,en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数组 · Go笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Landers">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="gonote3.html" />
+    
+    
+    <link rel="prev" href="gonote1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">基础篇</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="gonote1.html">
+            
+                <a href="gonote1.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="gonote2.html">
+            
+                <a href="gonote2.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="gonote3.html">
+            
+                <a href="gonote3.html">
+            
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="gonote4.html">
+            
+                <a href="gonote4.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="gonote5.html">
+            
+                <a href="gonote5.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="gonote6.html">
+            
+                <a href="gonote6.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="gonote7.html">
+            
+                <a href="gonote7.html">
+            
+                    
+                    总结练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">面向对象篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="gonote8.html">
+            
+                <a href="gonote8.html">
+            
+                    
+                    对象类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="gonote9.html">
+            
+                <a href="gonote9.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">并发编程</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="gonote10.html">
+            
+                <a href="gonote10.html">
+            
+                    
+                    goroutine及通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="gonote11.html">
+            
+                <a href="gonote11.html">
+            
+                    
+                    通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="gonote12.html">
+            
+                <a href="gonote12.html">
+            
+                    
+                    并行同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >数组</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Go&#x5B66;&#x4E60;&#x7B14;&#x8BB0;2</p>
+<h3 id="&#x6570;&#x7EC4;&#x5207;&#x7247;">&#x6570;&#x7EC4;&#x5207;&#x7247;</h3>
+<p>&#x5728;go&#x4E2D;&#x6570;&#x7EC4;&#x5728;&#x751F;&#x6210;&#x540E;&#xFF0C;&#x5BF9;&#x6570;&#x7EC4;&#x7684;&#x8D4B;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x5C06;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x5E76;&#x8FDB;&#x884C;&#x503C;&#x7684;&#x4FEE;&#x6539;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x5BF9;&#x6570;&#x7EC4;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x526F;&#x672C;&#xFF0C;&#x6700;&#x540E;&#x4EA7;&#x751F;&#x53D8;&#x5316;&#x7684;&#x90FD;&#x662F;&#x65B0;&#x751F;&#x6210;&#x7684;&#x526F;&#x672C;&#x6570;&#x7EC4;&#x800C;&#x539F;&#x6570;&#x7EC4;&#x7684;&#x503C;&#x4E0D;&#x80FD;&#x88AB;&#x6539;&#x53D8;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+)
+<span class="hljs-keyword">func</span> modify(array [<span class="hljs-number">5</span>]<span class="hljs-keyword">int</span>){
+    array[<span class="hljs-number">0</span>] = <span class="hljs-number">10</span>
+    fmt.Println(<span class="hljs-string">&quot;in modify array value is&quot;</span> , array)
+}
+<span class="hljs-keyword">func</span> main(){
+    array := [<span class="hljs-number">5</span>]<span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>}
+    modify(array)
+    fmt.Println(<span class="hljs-string">&quot;in main array value is&quot;</span> , array)
+}
+</code></pre>
+<p>&#x4E3A;&#x65B9;&#x4FBF;&#x4FEE;&#x6539;&#x6570;&#x7EC4;&#xFF0C;&#x5F15;&#x5165;&#x4E86;&#x6570;&#x7EC4;&#x5207;&#x7247;&#x7684;&#x6982;&#x5FF5;</p>
+<p>&#x6570;&#x7EC4;&#x5207;&#x7247;&#x7C7B;&#x4F3C;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x6307;&#x5411;&#x539F;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x4E00;&#x6BB5;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x548C;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;</p>
+<pre><code class="lang-go"><span class="hljs-comment">//&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x539F;&#x6570;&#x7EC4;&#x521B;&#x5EFA;&#x5207;&#x7247;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x521B;&#x5EFA;</span>
+<span class="hljs-keyword">func</span> main(){
+    <span class="hljs-keyword">var</span> myArray [<span class="hljs-number">10</span>]<span class="hljs-keyword">int</span> = [<span class="hljs-number">10</span>]<span class="hljs-keyword">int</span> {<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>}
+    <span class="hljs-keyword">var</span> mySlice []<span class="hljs-keyword">int</span> = myArray[:<span class="hljs-number">5</span>]
+    fmt.Println(<span class="hljs-string">&quot;elements of myArray&quot;</span>)
+    <span class="hljs-keyword">for</span> _,v := <span class="hljs-keyword">range</span> myArray{
+        fmt.Println(v)
+    }
+    fmt.Println(<span class="hljs-string">&quot;\n elements of mySlice&quot;</span>)
+    <span class="hljs-keyword">for</span> _,v := <span class="hljs-keyword">range</span> mySlice{
+        fmt.Println(v)
+    }
+}
+<span class="hljs-comment">//&#x5207;&#x7247;&#x5305;&#x542B;&#x5168;&#x90E8;&#x5143;&#x7D20;</span>
+<span class="hljs-keyword">var</span> mySlice []<span class="hljs-keyword">int</span> = myArray[:]
+<span class="hljs-comment">//&#x5305;&#x542B;&#x540E;&#x4E94;&#x4E2A;&#x5143;&#x7D20;</span>
+<span class="hljs-keyword">var</span> mySlice []<span class="hljs-keyword">int</span> = myArray[<span class="hljs-number">5</span>:]
+
+<span class="hljs-comment">//&#x76F4;&#x63A5;&#x521B;&#x5EFA;&#x5207;&#x7247;</span>
+mySlice1 := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span> <span class="hljs-number">5</span>) <span class="hljs-comment">//&#x5143;&#x7D20;&#x4E3A;5&#xFF0C;&#x521D;&#x59CB;&#x4E3A;0</span>
+mySlice2 := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span> <span class="hljs-number">5</span>,<span class="hljs-number">10</span>) <span class="hljs-comment">//&#x5143;&#x7D20;&#x4E3A;5&#xFF0C;&#x9884;&#x7559;10&#x4E2A;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;</span>
+mySlice3 := []<span class="hljs-keyword">int</span> {<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>} <span class="hljs-comment">//&#x76F4;&#x63A5;&#x521B;&#x5EFA;&#x5E76;&#x521D;&#x59CB;&#x5316;</span>
+</code></pre>
+<p>&#x5207;&#x7247;&#x7684;&#x4F18;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x6539;&#x53D8;&#x5185;&#x90E8;&#x5143;&#x7D20;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x56E0;&#x4E3A;&#x6709;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF0C;&#x4F7F;&#x7528;cap()&#x8FD4;&#x56DE;&#x5207;&#x7247;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> main()  {
+    <span class="hljs-comment">//&#x76F4;&#x63A5;&#x521B;&#x5EFA;&#x5207;&#x7247;</span>
+    mySlice1 := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>,<span class="hljs-number">5</span>) <span class="hljs-comment">//&#x5143;&#x7D20;&#x4E3A;5&#xFF0C;&#x521D;&#x59CB;&#x4E3A;0</span>
+    mySlice2 := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span> ,<span class="hljs-number">5</span>,<span class="hljs-number">10</span>) <span class="hljs-comment">//&#x5143;&#x7D20;&#x4E3A;5&#xFF0C;&#x9884;&#x7559;10&#x4E2A;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;</span>
+    <span class="hljs-comment">//mySlice3 := []int {1,2,3,4,5} //&#x76F4;&#x63A5;&#x521B;&#x5EFA;&#x5E76;&#x521D;&#x59CB;&#x5316;</span>
+    fmt.Println(<span class="hljs-string">&quot;len&quot;</span>,<span class="hljs-built_in">len</span>(mySlice1))
+    fmt.Println(<span class="hljs-string">&quot;cap&quot;</span>,<span class="hljs-built_in">cap</span>(mySlice2))
+
+}
+</code></pre>
+<p>&#x5207;&#x7247;&#x652F;&#x6301;&#x4F7F;&#x7528;append&#x52A8;&#x6001;&#x6269;&#x5C55;</p>
+<pre><code class="lang-go">mySlice = <span class="hljs-built_in">append</span>(mySlice ,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)
+mySlice2 := []<span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>}
+mySlice = <span class="hljs-built_in">append</span>(mySlice,mySlice2...) <span class="hljs-comment">//...&#x7528;&#x4E8E;&#x5C06;mySlice&#x5207;&#x7247;&#x7684;&#x5168;&#x90E8;&#x5143;&#x7D20;&#x62C6;&#x5206;&#x540E;&#x52A0;&#x5165;</span>
+</code></pre>
+<p>&#x57FA;&#x4E8E;&#x6570;&#x7EC4;&#x5207;&#x7247;&#x521B;&#x5EFA;&#x5207;&#x7247;</p>
+<pre><code class="lang-go">old := []<span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>}
+<span class="hljs-built_in">new</span> := old[:<span class="hljs-number">3</span>]
+<span class="hljs-comment">// &#x65B0;&#x7684;&#x5207;&#x7247;&#x957F;&#x5EA6;&#x53EF;&#x4EE5;&#x6BD4;&#x65E7;&#x7684;&#x5927;&#xFF0C;&#x591A;&#x51FA;&#x7684;&#x5143;&#x7D20;&#x5168;&#x90E8;&#x4E3A;0</span>
+</code></pre>
+<p>&#x5185;&#x5BB9;&#x590D;&#x5236;</p>
+<pre><code class="lang-go"><span class="hljs-comment">//&#x6309;&#x7167;&#x8F83;&#x5C0F;&#x7684;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x590D;&#x5236;</span>
+slice1 := []<span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>}
+slice2 := []<span class="hljs-keyword">int</span>{<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>}
+<span class="hljs-built_in">copy</span>(slice2,slice1) <span class="hljs-comment">//&#x590D;&#x5236;slice1&#x7684;&#x524D;&#x4E09;&#x4E2A;&#x5230;2&#x4E2D;</span>
+<span class="hljs-built_in">copy</span>(slice1,slice2) <span class="hljs-comment">//&#x590D;&#x5236;slice2&#x7684;3&#x4E2A;&#x5230;1&#x4E2D;&#x524D;&#x4E09;&#x4E2A;&#x4F4D;&#x7F6E;</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright&#xA9; Landers all right reserved&#xFF0C;powered by <a href="http://lrenj.top" target="_blank">Landers1037</a></span><span class="footer-modification">&#x66F4;&#x65B0;&#x4E8E;
+2019-06-01
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="gonote1.html" class="navigation navigation-prev " aria-label="Previous page: 变量">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="gonote3.html" class="navigation navigation-next " aria-label="Next page: 字典">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"comments":false,"title":"数组","level":"1.3","depth":1,"next":{"title":"字典","level":"1.4","depth":1,"path":"gonote3.md","ref":"gonote3.md","articles":[]},"previous":{"title":"变量","level":"1.2","depth":1,"path":"gonote1.md","ref":"gonote1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright© Landers","modify_label":"更新于","modify_format":"YYYY-MM-DD"},"search-pro":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Landers","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go笔记","language":"zh-Hans,en","gitbook":"*"},"file":{"path":"gonote2.md","mtime":"2019-06-01T03:26:43.731Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-19T14:00:05.350Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

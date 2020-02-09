@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#1a1a1a">
+	<title>Mgek.app</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/favicon.png" rel="icon">
+	<link href="https://fonts.googleapis.com/css?family=Oxygen:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap:500,600&display=swap" rel="stylesheet">
+	
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/flexslider/2.6.0/flexslider.min.css" rel="stylesheet">
+        <!-- Theme style  -->
+	<link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.bootcss.com/highlight.js/9.15.9/styles/atom-one-light.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://cdn.bootcss.com/modernizr/2.6.2/modernizr.min.js"></script>
+
+	</head>
+    <style>
+        h3{
+            font-size: 18px;
+            margin-bottom: 8px;
+            margin-top: 8px;
+            font-weight: bold;
+            color: #d9d6cf;
+        }
+        .toptitle{
+            font-size: 18px;
+            color: #fff;
+            margin: 0 auto;
+            margin-top: 10px;
+            width: fit-content;
+            height: fit-content;
+            padding: 0 5px 0 5px;
+            border: 2px solid #dddddd;
+        }
+        #fh5co-work{
+            padding-top: 2em;
+        }
+        .code pre{
+            border: none;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+        }
+        #fh5co-work img{
+            max-width: 90%;
+            margin: 0 auto;
+            margin-bottom: 15px;
+            border: 1.5px solid #808080;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        #fh5co-work img:hover{
+            opacity: 0.7;
+            border: 2px solid #268bd2;
+            transition: width 0.2s ease;
+        }
+        @media (max-width: 500px) {
+            #fh5co-work img{
+              max-width: 70%;
+                transition: all 0.3s ease;
+            }
+        }
+    </style>
+	<body>
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container-wrap">
+			<div class="top-menu">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="/">Mgek</a><i>APP</i></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li class="active"><a href="/">Home</a></li>
+							<li><a href="/doc/">Doc</a></li>
+							<li class="has-dropdown">
+								<a href="http://lrenj.top">Site</a>
+								<ul class="dropdown">
+									<li><a href="http://lrenj.top/blog/">Blog</a></li>
+									<li><a href="/usage/">Usage</a></li>
+									<li><a href="http://lrenj.top/copyright/">Copyright</a></li>
+									<li><a href="https://github.com/landers1037/">Github</a></li>
+								</ul>
+							</li>
+                            <li><a href="/public/">PUB</a></li>
+                            <li><a href="/api/">API</a></li>
+							<li><a href="/about/">About</a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+	<div class="container-wrap">
+			<div class="animated fadeInUp" style="padding-top: 10px">
+                <p class="toptitle">Font Cutter</p>
+                <p style="padding-top: 10px" class="text-center animated fadeInUp">simple solution of webfont compression</p>
+		  	</div>
+		<div id="fh5co-work">
+    <div class="code">
+    <pre class="python"><code>
+    '''
+    font-cutter: a webfont tool for compressing your font
+    '''
+    from fontcutter import FTool
+
+    font = FTool('Cabin-Regular.ttf',demo.txt)
+    font.save('demo.woff')
+    </code></pre>
+        <br>
+        <p>Font Cutter是一款web格式字体裁剪压缩工具</p>
+        <h3>功能</h3>
+        <p>1.对ttf,otf字体进行文字提取，保留所需要的文字部分(使用txt文件记录需要裁剪的文字数据，自动去重)</p>
+        <p>2.对ttf,otf字体格式转换生成优化的woff和woff2字体格式</p>
+        <p>3.提供<b>中文</b>字体常用字模板，根据需求导入模板快速裁剪中文字体</p>
+        <p>4.进阶选项，受<a href="http://font-spider.org/">字蛛</a>启发提供网页全局爬虫，批量爬取网页内的文字，自动裁剪生成压缩字体</p>
+        <h3>使用规则</h3>
+        <p>1.字体的裁剪与生成会在本地产生缓存，使用中请勿删除缓存，缓存会在运行后自动清除</p>
+        <p>2.使用爬虫爬取文本的两种途径:</p>
+        <li style="margin-left: 20px">本地运行web服务后通过localhost直接爬取，需要传入站点下全部网址列表</li>
+        <li style="margin-left: 20px;margin-bottom: 10px">传入html本地文件路径列表</li>
+
+        <p>3.裁剪的字体需要符合非商业用途规范，本软件属于开源软件用于非商业用途，任何超出本软件使用范围的行为与本软件无关</p>
+        <h3>阅读文档</h3>
+        <a href="/font-cutter.md">Font-Cutter</a>
+            <h3>依赖</h3>
+            <p>Pyquery<br>Requests<br>Fonttools</p>
+    </div>
+		</div>
+	</div><!-- END container-wrap -->
+
+	<div class="container-wrap">
+		<footer id="fh5co-footer" role="contentinfo">
+			<div class="row">
+				<div class="col-md-4 fh5co-widget">
+					<h4>About Mgek</h4>
+					<p>A website that I build to show my code work.<br>Here you can see the introduction of my apps and read documents online.My gitbook is also published here, you can read it if you like.</p>
+				</div>
+
+				<div class="col-md-4 col-md-push-1">
+					<h4>Links</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="#">Home</a></li>
+						<li><a href="http://lrenj.top">My site</a></li>
+						<li><a href="http://lrenj.top/blog/">Blog</a></li>
+						<li><a href="/about/">About</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4">
+					<h4>Contact Information</h4>
+					<ul class="fh5co-footer-links">
+                        <li><a>HUST 1037</a></li>
+						<li><a href="mailto:liaorenj@gmail.com">liaorenj@gmail.com</a></li>
+						<li><a href="https://t.me/Greatpipi/">Telegram</a></li>
+						<li><button onclick="window.location.href='https://github.com/landers1037'" style="background-color: #da2657;border: none;font-size: 12px;color: #fff;vertical-align: middle">Follow</button><span style="background-color: #e1e1e1;font-size:14px;padding: 2px 3px;vertical-align: middle">🍭</span></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<span class="block">&copy; 2019 <a href="http://lrenj.top/" target="_blank">Landers1037</a></span>
+					</p>
+				</div>
+			</div>
+		</footer>
+	</div><!-- END container-wrap -->
+	</div>
+	<!-- jQuery -->
+    <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+    <script src="https://cdn.bootcss.com/flexslider/2.6.0/jquery.flexslider.min.js"></script>
+	<script src="/js/main.js"></script>
+	</body>
+</html>
+

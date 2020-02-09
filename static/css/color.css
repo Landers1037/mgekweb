@@ -1,0 +1,162 @@
+
+.info{
+  text-align: left;
+  color: #dddddd;
+  font-size: 15px;
+  margin: auto;
+}
+#error{
+  color:red;
+  font-weight: bold;
+  text-align: left;
+}
+#file-select-input{
+  display:none;
+}
+.file-select-button{
+  margin:2em 0;
+}
+.file-select label{
+  font-weight: bold;
+  text-align: center;
+  padding: 1em;
+  color: #333;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #eeeeee;
+  border-radius: 7px;
+  box-shadow: 0px 1px 2px #888888;
+  cursor: pointer;
+}
+.file-select label:hover{
+  background-color: #454545;
+}
+
+#filedrag
+{
+	display: none;
+	font-weight: bold;
+  font-size: 105%;
+	text-align: center;
+	padding: 1.5em 0;
+	margin: 1em auto;
+	color: #555;
+	border: 2px dashed #555;
+	border-radius: 4px;
+	cursor: default;
+  width: 80%;
+}
+
+#filedrag.hover
+{
+	color: #28AFFA;
+	border-color: #28AFFA;
+	border-style: solid;
+	box-shadow: inset 0 3px 4px #888;
+}
+.image-div{
+  max-width: 60%;
+  min-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5em;
+  clear: both;
+  text-align: center;
+}
+.image-div > img{
+  margin: 0 auto;
+  max-width: 360px;
+}
+.image-details{
+  padding: 20px 0 0 0;
+  width:inherit;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.color-block-container.primary{
+  clear:both;
+  float:none;
+  width: 250px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+.color-block-container.primary p{
+  float: left;
+  font-size: 16px;
+  color: white;
+  line-height: 2.4em;
+  padding-left: 1.6em;
+  vertical-align: middle;
+}
+.color-block-container{
+  width:33.3%;
+  float:left;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  min-width:10em;
+}
+@media (max-width: 500px) {
+    .color-block-container{
+        width: 50%;
+    }
+}
+.color-block{
+  width:7em;
+  height:2.2em;
+  line-height: 2.2em;
+  font-weight: bold;
+  color: black;
+  vertical-align: middle;
+  display: inline-block;
+}
+.color-block.dark{
+  color:#eee;
+}
+.color-block-inner > button{
+  padding-left: 0.5em;
+  vertical-align: middle;
+}
+h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #d9d6cf;
+}
+.toptitle{
+    font-size: 18px;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: fit-content;
+    height: fit-content;
+    padding: 0 10px 0 10px;
+    border: 2px solid #dddddd;
+}
+#fh5co-work{
+    padding-top: 2em;
+}
+#demo{
+    width: inherit;
+    height: auto;
+    border-radius: 5px;
+    display: none;
+        }
+.btn-group button{
+    width: 120px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #333333;
+    font-weight: bold;
+    border-radius: 2px;
+    background-color: #ffffff;
+    outline: none;
+    border: 1px solid #808080;
+}
+.btn-group button:focus{
+    color: #f90;
+    font-weight: bold;
+    outline: none;
+}

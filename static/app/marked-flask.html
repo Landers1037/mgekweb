@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#1a1a1a">
+	<title>Mgek.app</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/favicon.png" rel="icon">
+	<link href="https://fonts.googleapis.com/css?family=Oxygen:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap:500,600&display=swap" rel="stylesheet">
+	
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/flexslider/2.6.0/flexslider.min.css" rel="stylesheet">
+        <!-- Theme style  -->
+	<link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.bootcss.com/highlight.js/9.15.9/styles/atom-one-light.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://cdn.bootcss.com/modernizr/2.6.2/modernizr.min.js"></script>
+
+	</head>
+    <style>
+        h3{
+            font-size: 18px;
+            margin-bottom: 8px;
+            margin-top: 8px;
+            font-weight: bold;
+            color: #d9d6cf;
+        }
+        .toptitle{
+            font-size: 18px;
+            color: #fff;
+            margin: 0 auto;
+            margin-top: 10px;
+            width: fit-content;
+            height: fit-content;
+            padding: 0 5px 0 5px;
+            border: 2px solid #dddddd;
+        }
+        #fh5co-work{
+            padding-top: 2em;
+        }
+        .code pre{
+            border: none;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+        }
+        #fh5co-work .col-md-6{
+            padding: 0;
+        }
+    </style>
+	<body>
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container-wrap">
+			<div class="top-menu">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="/">Mgek</a><i>APP</i></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li class="active"><a href="/">Home</a></li>
+							<li><a href="/doc/">Doc</a></li>
+							<li class="has-dropdown">
+								<a href="http://lrenj.top">Site</a>
+								<ul class="dropdown">
+									<li><a href="http://lrenj.top/blog/">Blog</a></li>
+									<li><a href="/usage/">Usage</a></li>
+									<li><a href="http://lrenj.top/copyright/">Copyright</a></li>
+									<li><a href="https://github.com/landers1037/">Github</a></li>
+								</ul>
+							</li>
+                            <li><a href="/public/">PUB</a></li>
+                            <li><a href="/api/">API</a></li>
+							<li><a href="/about/">About</a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+	<div class="container-wrap">
+			<div class="animated fadeInUp" style="padding-top: 10px">
+                <p class="toptitle">Marked-Flask</p>
+                <p style="padding-top: 10px" class="text-center animated fadeInUp">Flask app that renders md to html by marked.js </p>
+		  	</div>
+		<div id="fh5co-work">
+    <div class="code">
+    <pre class="python"><code>
+'''thanks for trying marked-flask😊, it's a simple way to read your .md online🍦'''
+    </code></pre>
+        <br>
+        <p>marked-flask是一个基于marked.js渲染md文件的flask应用</p>
+        <h3>简介</h3>
+        <p>该应用基于flask，利用ajax读取本地markdown文件，在前端使用<code>marked.js</code>直接渲染为html文本。配合<code>github-markdown-css</code>和<code>highlight.js</code>实现对文本内容和代码块的特殊渲染</p>
+        <p>本站点的在线文档即使用<code>marked-flask</code>框架</p>
+        <h3>下载</h3>
+        <p>使用git克隆源码仓库</p>
+        <pre class="bash"><code>$ git clone https://github.com/Landers1037/marked-flask.git</code></pre>
+        <h3>阅读文档</h3>
+        <a href="/marked-flask.md">Marked-Flask</a>
+    </div>
+		</div>
+	</div><!-- END container-wrap -->
+
+	<div class="container-wrap">
+		<footer id="fh5co-footer" role="contentinfo">
+			<div class="row">
+				<div class="col-md-4 fh5co-widget">
+					<h4>About Mgek</h4>
+					<p>A website that I build to show my code work.<br>Here you can see the introduction of my apps and read documents online.My gitbook is also published here, you can read it if you like.</p>
+				</div>
+
+				<div class="col-md-4 col-md-push-1">
+					<h4>Links</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="#">Home</a></li>
+						<li><a href="http://lrenj.top">My site</a></li>
+						<li><a href="http://lrenj.top/blog/">Blog</a></li>
+						<li><a href="/about/">About</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4">
+					<h4>Contact Information</h4>
+					<ul class="fh5co-footer-links">
+                        <li><a>HUST 1037</a></li>
+						<li><a href="mailto:liaorenj@gmail.com">liaorenj@gmail.com</a></li>
+						<li><a href="https://t.me/Greatpipi/">Telegram</a></li>
+						<li><button onclick="window.location.href='https://github.com/landers1037'" style="background-color: #da2657;border: none;font-size: 12px;color: #fff;vertical-align: middle">Follow</button><span style="background-color: #e1e1e1;font-size:14px;padding: 2px 3px;vertical-align: middle">🍭</span></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<span class="block">&copy; 2019 <a href="http://lrenj.top/" target="_blank">Landers1037</a></span>
+					</p>
+				</div>
+			</div>
+		</footer>
+	</div><!-- END container-wrap -->
+	</div>
+	<!-- jQuery -->
+    <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+    <script src="https://cdn.bootcss.com/flexslider/2.6.0/jquery.flexslider.min.js"></script>
+	<script src="/js/main.js"></script>
+	</body>
+</html>
+

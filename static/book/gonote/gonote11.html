@@ -1,0 +1,487 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-Hans,en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>通道 · Go笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Landers">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="gonote12.html" />
+    
+    
+    <link rel="prev" href="gonote10.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">基础篇</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="gonote1.html">
+            
+                <a href="gonote1.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="gonote2.html">
+            
+                <a href="gonote2.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="gonote3.html">
+            
+                <a href="gonote3.html">
+            
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="gonote4.html">
+            
+                <a href="gonote4.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="gonote5.html">
+            
+                <a href="gonote5.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="gonote6.html">
+            
+                <a href="gonote6.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="gonote7.html">
+            
+                <a href="gonote7.html">
+            
+                    
+                    总结练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">面向对象篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="gonote8.html">
+            
+                <a href="gonote8.html">
+            
+                    
+                    对象类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="gonote9.html">
+            
+                <a href="gonote9.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">并发编程</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="gonote10.html">
+            
+                <a href="gonote10.html">
+            
+                    
+                    goroutine及通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="gonote11.html">
+            
+                <a href="gonote11.html">
+            
+                    
+                    通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="gonote12.html">
+            
+                <a href="gonote12.html">
+            
+                    
+                    并行同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >通道</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Go&#x5B66;&#x4E60;&#x7B14;&#x8BB0;11</p>
+<h3 id="&#x901A;&#x9053;">&#x901A;&#x9053;</h3>
+<h4 id="select&#x4F7F;&#x7528;">select&#x4F7F;&#x7528;</h4>
+<p>select&#x662F;&#x4E00;&#x79CD;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x7684;&#x76D1;&#x542C;&#x673A;&#x5236;&#xFF0C;&#x4F7F;&#x7528;select&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x7CFB;&#x7EDF;&#x7684;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#xFF0C;&#x4E00;&#x65E6;&#x4E00;&#x4E2A;&#x53E5;&#x67C4;&#x53D1;&#x751F;&#x4E86;IO&#x52A8;&#x4F5C;&#xFF0C;&#x8BE5;select&#x51FD;&#x6570;&#x8C03;&#x7528;&#x5C31;&#x4F1A;&#x88AB;&#x8FD4;&#x56DE;&#x3002;&#x5728;go&#x4E2D;select&#x7528;&#x4E8E;&#x5904;&#x7406;&#x5F02;&#x6B65;IO&#x95EE;&#x9898;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">select</span>{
+    <span class="hljs-keyword">case</span> &lt;- chan1:
+    <span class="hljs-comment">//</span>
+    <span class="hljs-keyword">case</span> chan2 &lt;- <span class="hljs-number">-1</span>:
+    <span class="hljs-comment">//</span>
+    <span class="hljs-keyword">default</span>:
+    <span class="hljs-comment">//&#x4E0A;&#x9762;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x6CA1;&#x6709;&#x6267;&#x884C;&#x6210;&#x529F;&#x65F6;&#x8FDB;&#x5165;&#x9ED8;&#x8BA4;&#x73AF;&#x8282;</span>
+}
+</code></pre>
+<p>select&#x8BED;&#x53E5;&#x548C;switch&#x8BED;&#x53E5;&#x7684;&#x6700;&#x5927;&#x7684;&#x533A;&#x522B;&#x5C31;&#x662F;select&#x7684;case&#x91CC;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x7684;IO&#x64CD;&#x4F5C;&#xFF0C;select&#x540E;&#x9762;&#x4E0D;&#x9700;&#x8981;&#x5199;&#x5224;&#x65AD;&#x6761;&#x4EF6;</p>
+<pre><code class="lang-go">ch := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span> ,<span class="hljs-number">1</span>)
+<span class="hljs-keyword">for</span>{
+    <span class="hljs-keyword">select</span>{
+        <span class="hljs-keyword">case</span> ch &lt;- <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">case</span> ch &lt;- <span class="hljs-number">1</span>:
+    }
+    i := &lt;- ch
+    fmt.Println(<span class="hljs-string">&quot;i&quot;</span>)
+}
+</code></pre>
+<p>&#x968F;&#x673A;&#x5411;&#x901A;&#x9053;&#x91CC;&#x5199;&#x5165;&#x4E00;&#x4E2A;0&#x6216;&#x8005;1&#x7684;&#x8FC7;&#x7A0B;</p>
+<h4 id="&#x7F13;&#x51B2;&#x673A;&#x5236;">&#x7F13;&#x51B2;&#x673A;&#x5236;</h4>
+<p>&#x53EA;&#x4F20;&#x8F93;&#x5355;&#x4E2A;&#x7684;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x7528;&#x5230;&#x7F13;&#x5B58;&#xFF0C;&#x4F46;&#x662F;&#x5F53;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#x91CF;&#x5DE8;&#x5927;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7528;&#x5230;&#x7F13;&#x51B2;&#x673A;&#x5236;&#x6765;&#x5EFA;&#x7ACB;&#x901A;&#x9053;&#xFF0C;&#x4ECE;&#x800C;&#x8FBE;&#x5230;&#x6D88;&#x606F;&#x961F;&#x5217;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+<pre><code class="lang-go">c := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span> ,<span class="hljs-number">1024</span>)
+</code></pre>
+<p>&#x5927;&#x5C0F;&#x4E3A;1024&#x7684;int&#x578B;&#x901A;&#x9053;    </p>
+<p>&#x4ECE;&#x5E26;&#x6709;&#x7F13;&#x51B2;&#x7684;&#x901A;&#x9053;&#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x548C;&#x4ECE;&#x4E0D;&#x5E26;&#x7F13;&#x51B2;&#x7684;&#x5E38;&#x89C4;&#x901A;&#x9053;&#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;range&#x51FD;&#x6570;&#x6765;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#x7684;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">for</span> i := <span class="hljs-keyword">range</span> c{
+    fmt.Println(<span class="hljs-string">&quot;Received:&quot;</span>,i)
+}
+</code></pre>
+<h4 id="&#x8D85;&#x65F6;&#x673A;&#x5236;">&#x8D85;&#x65F6;&#x673A;&#x5236;</h4>
+<p>&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x4E2D;&#x6700;&#x9700;&#x8981;&#x5904;&#x7406;&#x7684;&#x95EE;&#x9898;&#x662F;&#x8D85;&#x65F6;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x5F15;&#x5165;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x7684;&#x673A;&#x5236;</p>
+<p>go&#x5E76;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x8D85;&#x65F6;&#x5904;&#x7406;&#x673A;&#x5236;&#x7684;&#x5305;&#xFF0C;&#x4F46;&#x662F;&#x4F7F;&#x7528;select&#x5305;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x5730;&#x5904;&#x7406;&#xFF0C;&#x56E0;&#x4E3A;select&#x91CC;&#x7684;case&#x53EA;&#x8981;&#x7531;&#x4E00;&#x4E2A;&#x5B8C;&#x6210;&#x5C31;&#x4F1A;&#x7EE7;&#x7EED;&#x8FDB;&#x884C;&#x4E0B;&#x53BB;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x8003;&#x8651;&#x5176;&#x4ED6;case&#x7684;&#x60C5;&#x51B5;</p>
+<pre><code class="lang-go">timeout := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">bool</span>,<span class="hljs-number">1</span>)
+<span class="hljs-keyword">go</span> <span class="hljs-keyword">func</span>(){
+    time.Sleep(<span class="hljs-number">1e9</span>)
+    timeout &lt;- <span class="hljs-literal">true</span>
+}()
+</code></pre>
+<pre><code class="lang-go"><span class="hljs-keyword">select</span>{
+    <span class="hljs-keyword">case</span> &lt;- ch:
+    <span class="hljs-comment">//&#x8BFB;&#x53D6;&#x6570;&#x636E;</span>
+    <span class="hljs-keyword">case</span> &lt;-timeout
+    <span class="hljs-comment">//&#x6CA1;&#x6709;&#x4ECE;ch&#x4E2D;&#x8BFB;&#x53D6;&#x5230;&#x6570;&#x636E;&#xFF0C;&#x4F46;&#x662F;&#x4ECE;timeout&#x4E2D;&#x8BFB;&#x53D6;&#x5230;&#x4E86;&#x6570;&#x636E;</span>
+}
+</code></pre>
+<p>&#x65E0;&#x8BBA;&#x5BF9;ch&#x90FD;&#x8BFB;&#x53D6;&#x662F;&#x5426;&#x8FD8;&#x5728;&#x7B49;&#x5F85;&#xFF0C;&#x4ECE;timeout&#x4E2D;&#x8BFB;&#x53D6;&#x5230;&#x4E86;&#x6570;&#x636E;&#xFF0C;&#x7A0B;&#x5E8F;&#x5C31;&#x4F1A;&#x6267;&#x884C;&#x4E0B;&#x53BB;&#xFF0C;&#x4ECE;&#x800C;&#x8FBE;&#x5230;&#x5EF6;&#x8FDF;1s&#x7684;&#x76EE;&#x7684;</p>
+<h4 id="channel&#x7684;&#x4F20;&#x9012;">channel&#x7684;&#x4F20;&#x9012;</h4>
+<p>go&#x4E2D;&#x7684;channel&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x539F;&#x751F;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x548C;map&#x540C;&#x7EA7;&#xFF0C;&#x6240;&#x4EE5;&#x5728;channel&#x4E2D;&#x4F20;&#x9012;&#x7684;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;channel</p>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> PipeData <span class="hljs-keyword">struct</span> {
+    value <span class="hljs-keyword">int</span>
+    handler <span class="hljs-keyword">func</span>(<span class="hljs-keyword">int</span>) <span class="hljs-keyword">int</span>
+    next <span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>
+}
+
+<span class="hljs-keyword">func</span> handle(queue <span class="hljs-keyword">chan</span> *PipeData){
+    <span class="hljs-keyword">for</span> data := <span class="hljs-keyword">range</span> queue{
+        data.next &lt;- data.handler(data.value)
+    }
+}
+</code></pre>
+<h4 id="&#x5355;&#x5411;channel">&#x5355;&#x5411;channel</h4>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x662F;&#x5355;&#x5411;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x8981;&#x4E48;&#x53EA;&#x80FD;&#x5199;&#x8981;&#x4E48;&#x53EA;&#x80FD;&#x8BFB;&#x3002;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x5355;&#x5411;&#x901A;&#x9053;&#x6765;&#x9650;&#x5236;&#x51FD;&#x6570;&#x5BF9;&#x901A;&#x9053;&#x7684;&#x64CD;&#x4F5C;&#x6743;&#x9650;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> ch1 <span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span> <span class="hljs-comment">//&#x6B63;&#x5E38;chan</span>
+<span class="hljs-keyword">var</span> ch2 <span class="hljs-keyword">chan</span>&lt;- <span class="hljs-keyword">float64</span> <span class="hljs-comment">//&#x5355;&#x5411;chan&#xFF0C;&#x53EA;&#x80FD;&#x5199;float64&#x6570;&#x636E;</span>
+<span class="hljs-keyword">var</span> ch3 &lt;-<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span> <span class="hljs-comment">//&#x5355;&#x5411;chan&#xFF0C;&#x53EA;&#x80FD;&#x8BFB;&#x53D6;int&#x6570;&#x636E;</span>
+</code></pre>
+<h5 id="&#x8F6C;&#x6362;">&#x8F6C;&#x6362;</h5>
+<pre><code class="lang-go">ch1 := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>)
+ch2 := &lt;-<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>(ch1) <span class="hljs-comment">//&#x8F6C;&#x6362;&#x4E3A;&#x5355;&#x5411;chan&#x8BFB;&#x53D6;</span>
+ch3 := <span class="hljs-keyword">chan</span>&lt;- <span class="hljs-keyword">int</span>(ch1) <span class="hljs-comment">//&#x8F6C;&#x6362;&#x4E3A;&#x5355;&#x5411;&#x5199;chan</span>
+</code></pre>
+<h5 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h5>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> Read(ch &lt;-<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>){
+    <span class="hljs-keyword">for</span> value := <span class="hljs-keyword">range</span> ch{
+        fmt.Print(value)
+    }
+}
+</code></pre>
+<p>Read&#x51FD;&#x6570;&#x53EA;&#x62E5;&#x6709;ch&#x7684;&#x8BFB;&#x53D6;&#x6743;&#x9650;&#xFF0C;&#x8FD9;&#x6837;&#x907F;&#x514D;&#x4E86;&#x6743;&#x9650;&#x7684;&#x6EE5;&#x7528;</p>
+<h4 id="&#x5173;&#x95ED;channel">&#x5173;&#x95ED;channel</h4>
+<p>&#x4F7F;&#x7528;<code>close(ch)</code></p>
+<p>&#x5224;&#x65AD;&#x662F;&#x5426;&#x5173;&#x95ED;&#x8FD8;&#x53EF;&#x4EE5;<code>x,ok := &lt;-ch</code></p>
+<footer class="page-footer"><span class="copyright">Copyright&#xA9; Landers all right reserved&#xFF0C;powered by <a href="http://lrenj.top" target="_blank">Landers1037</a></span><span class="footer-modification">&#x66F4;&#x65B0;&#x4E8E;
+2019-06-05
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="gonote10.html" class="navigation navigation-prev " aria-label="Previous page: goroutine及通道">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="gonote12.html" class="navigation navigation-next " aria-label="Next page: 并行同步">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"comments":false,"title":"通道","level":"3.2","depth":1,"next":{"title":"并行同步","level":"3.3","depth":1,"path":"gonote12.md","ref":"gonote12.md","articles":[]},"previous":{"title":"goroutine及通道","level":"3.1","depth":1,"path":"gonote10.md","ref":"gonote10.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright© Landers","modify_label":"更新于","modify_format":"YYYY-MM-DD"},"search-pro":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Landers","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go笔记","language":"zh-Hans,en","gitbook":"*"},"file":{"path":"gonote11.md","mtime":"2019-06-05T04:55:57.008Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-19T14:00:05.350Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

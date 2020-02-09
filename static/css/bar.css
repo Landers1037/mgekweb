@@ -1,0 +1,39 @@
+.bar{
+    width: 360px;
+    position: fixed;
+    z-index: 999;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #313131;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    line-height: 2;
+}
+.bar #tit{
+    display: inline-block;
+    font-size: 17px;
+    font-family: "Asap",sans-serif;
+    color: white;
+
+}
+.bar #tit >small{
+    font-size: 75%;
+}
+.bar #tit >i{
+    font-style: normal;
+    color: #7bbfea;
+    font-family: "Asap",sans-serif;
+}
+.bar button#page{
+    display: inline-block;
+    width: 80px;
+    color: black;
+    font-weight: bold;
+    float: right;
+    background: #f90;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 5px 5px 5px 5px;
+}

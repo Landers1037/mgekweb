@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#1a1a1a">
+	<title>Mgek.app</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/favicon.png" rel="icon">
+	<link href="https://fonts.googleapis.com/css?family=Oxygen:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap:500,600&display=swap" rel="stylesheet">
+	
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/flexslider/2.6.0/flexslider.min.css" rel="stylesheet">
+        <!-- Theme style  -->
+	<link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.bootcss.com/modernizr/2.6.2/modernizr.min.js"></script>
+
+	</head>
+    <style>
+        #fh5co-work img{
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        .head{
+            min-height: 400px;
+        }
+        h3{
+            font-size: 18px;
+            margin-bottom: 8px;
+            margin-top: 8px;
+            font-weight: bold;
+            color: #d9d6cf;
+        }
+        .toptitle{
+            font-size: 18px;
+            color: #fff;
+            margin: 0 auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            width: fit-content;
+            height: fit-content;
+            padding: 0 5px 0 5px;
+            border: 2px solid #dddddd;
+        }
+        @media (max-width: 700px) {
+            #fh5co-work img{
+                max-width: 70%;
+            }
+            #fh5co-hero,#fh5co-hero .head{
+                min-height: 300px;
+            }
+        }
+        @media (max-width: 550px) {
+            #fh5co-hero,#fh5co-hero .head{
+                min-height: 200px;
+            }
+        }
+    </style>
+	<body>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container-wrap">
+			<div class="top-menu">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="/">Mgek</a><i>APP</i></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li class="active"><a href="/">Home</a></li>
+							<li><a href="/doc/">Doc</a></li>
+							<li class="has-dropdown">
+								<a href="http://lrenj.top">Site</a>
+								<ul class="dropdown">
+									<li><a href="http://lrenj.top/blog/">Blog</a></li>
+									<li><a href="/usage/">Usage</a></li>
+									<li><a href="http://lrenj.top/copyright/">Copyright</a></li>
+									<li><a href="https://github.com/landers1037/">Github</a></li>
+								</ul>
+							</li>
+                            <li><a href="/public/">PUB</a></li>
+                            <li><a href="/api/">API</a></li>
+							<li><a href="/about/">About</a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+	<div class="container-wrap">
+		<aside id="fh5co-hero">
+            <div class="text-center animated fadeInUp">
+                <p class="toptitle">Pin Yin</p>
+			</div>
+			   	<div class="head" style="background: url(/store/pinyin/jiemian.png) center center no-repeat;background-size: contain"></div>
+		</aside>		
+		<div id="fh5co-work">
+			<div class="row">
+                <h4 style="padding-left: 15px;padding-right: 15px">主体界面</h4>
+				<div class="col-md-4">
+						<img src="/store/pinyin/input.png" class="img-responsive">
+				</div>
+                <div class="col-md-4">
+						<img src="/store/pinyin/pinyin.png" class="img-responsive">
+				</div>
+                <div class="col-md-4">
+						<img src="/store/pinyin/saved.png" class="img-responsive">
+				</div>
+				<div class="col-md-12 fh5co-project-detail">
+					<h3>功能介绍</h3>
+					<span class="fh5co-project-sub">拼音注音</span>
+					<p>本软件可以将输入的拼音字母标注音标并保存为图片，用于拼音教学<br>保存的图片格式可以选择jpg或者png格式</p>
+					<span class="fh5co-project-sub">使用优化</span>
+                    <p>1.对于输入法不易输入声韵母音标的问题，本软件提供一个自定义字母盘，选择需要输入的字母和声调即可快速添加拼音<br>
+                    2.针对由操作系统引起的部分字母字形变化问题，本软件提供了内置优化字体，同一跨平台间的字形<br>
+                    3.针对输入框的文字长度，自动切割文字长度生成多张图片，无需担心拼音过长超出图片长度<br>
+                    4.为主界面添加了状态显示框，可以查看图片的保存状态
+                    </p>
+					<span class="fh5co-project-sub">可选功能</span>
+                    <p>除了拼音注音功能，软件还提供了汉字注音功能(仍在测试中)</p>
+                    <h3>阅读文档</h3>
+                    <a href="/pinyin.md">Pinyin</a>
+					<div class="fh5co-project-service">
+						<h3>依赖</h3>
+						<ul>
+							<li>PyQt5.1.2</li>
+							<li>Pillow</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- END container-wrap -->
+
+	<div class="container-wrap">
+		<footer id="fh5co-footer" role="contentinfo">
+			<div class="row">
+				<div class="col-md-4 fh5co-widget">
+					<h4>About Mgek</h4>
+					<p>A website that I build to show my code work.<br>Here you can see the introduction of my apps and read documents online.My gitbook is also published here, you can read it if you like.</p>
+				</div>
+
+				<div class="col-md-4 col-md-push-1">
+					<h4>Links</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="/">Home</a></li>
+						<li><a href="http://lrenj.top">My site</a></li>
+						<li><a href="http://lrenj.top/blog/">Blog</a></li>
+						<li><a href="/about/">About</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4">
+					<h4>Contact Information</h4>
+					<ul class="fh5co-footer-links">
+                        <li><a>HUST 1037</a></li>
+						<li><a href="mailto:liaorenj@gmail.com">liaorenj@gmail.com</a></li>
+						<li><a href="https://t.me/Greatpipi/">Telegram</a></li>
+						<li><button onclick="window.location.href='https://github.com/landers1037'" style="background-color: #da2657;border: none;font-size: 12px;color: #fff;vertical-align: middle">Follow</button><span style="background-color: #e1e1e1;font-size:14px;padding: 2px 3px;vertical-align: middle">🍭</span></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<span class="block">&copy; 2019 <a href="http://lrenj.top/" target="_blank">Landers1037</a></span>
+					</p>
+				</div>
+			</div>
+		</footer>
+	</div><!-- END container-wrap -->
+	</div>
+	
+	<!-- jQuery -->
+    <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+    <script src="https://cdn.bootcss.com/flexslider/2.6.0/jquery.flexslider.min.js"></script>
+	<script src="/js/main.js"></script>
+	</body>
+</html>
+

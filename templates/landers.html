@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#1a1a1a">
+    <title>Mgek & Landers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Landers的项目，Mgek项目">
+	<meta name="keywords" content="mgek,Landers1037,项目,开源项目,Mgek项目">
+    <meta name="google" content="notranslate">
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="mgek">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="http://mgek.cc">
+	<meta property="og:site_name" content="mgek项目">
+	<meta property="og:description" content="Mgek项目,Landers的开源项目">
+	<meta name="twitter:title" content="Mgek">
+	<meta name="twitter:image" content="">
+	<meta name="twitter:url" content="http://mgek.cc">
+	<meta name="twitter:card" content="">
+    <link href="/favicon.png" rel="icon">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    .body{width: calc(80% - 20vw);margin: 0 auto;}
+    p{line-height: 1.5}
+    @media (max-width: 600px) {.body{width: 90%}}
+    .top-left{font-size: 20px;font-weight: bold;margin-top: 10px;margin-bottom: 10px}
+    .top-img{height: 60px;}
+    .top-img .im{padding: 10px 5px 10px 5px;}
+    .top-img #im1{background: url("http://cache.mgek.cc/images/mgek/landers.png") center center;width: 60px;height: 60px;display: inline-block;background-size: contain;border: 1.5px solid #404040}
+    .top-img #im2{background: url("http://cache.mgek.cc/images/mgek/favicon.png") center center;width: 60px;height: 60px;display: inline-block;background-size: contain;border: 1.5px solid #404040}
+    .bt{font-size: 0}
+    .bt a{font-size:14px;background: #fdfdfd;color: black;padding: 5px 0 5px 0;border: 1px solid #d0d0d0;margin-left: -1px;display: inline-block;text-decoration: none;width: 70px}
+    .bt a:hover{background: #d5d5d5;}
+    .article{padding: 10px 0 10px 0;margin-top: 20px;font-size: 15px}
+    .article li{font-size: 25px;list-style: disc;margin-bottom: 15px;margin-top: 15px}
+    .article .img{max-width: 80%}
+    .article .list li {font-size: 15px;cursor: pointer;list-style: circle;margin-top: 0;margin-bottom: 0}
+    .footer{padding: 10px 10px 10px 10px;margin: 0 auto;margin-top: 10px;font-size: 16px;}
+</style>
+<body>
+<div class="body">
+<div class="page-header">
+        <h3>MGEK | LANDERS</h3>
+</div>
+<div class="main">
+    <div class="top-img"><i class="img-circle" id="im1"></i><i class="im text-center">AND</i><i class="img-circle" id="im2"></i></div>
+    <hr>
+    <div class="bt">
+        <a class="text-center" href="/">MGEK</a>
+        <a class="text-center" href="#about">全部项目</a>
+        <a class="text-center" href="http://lrenj.top">我的主页</a>
+        <a class="text-center" href="https://github.com/landers1037/mgek">源码</a>
+    </div>
+    <div class="article">
+        <li >关于这里</li>
+        <p>我是一名计算机科学爱好者，我的英文昵称是Landers，这里是我用来存放展示我的项目及源码的地方，我称之为<span style="color: crimson">Mgek</span></p>
+        <p><span style="color: crimson">Mgek</span>亦为<strong>Magic work</strong>，即充满创造力的工作，所有项目均来自生活中的灵感</p>
+        <li>最近项目</li>
+        <p><span style="color: #378de5">Mgek ImgHost</span>一个轻量级的本地图床，用于解决小需求的图片引入，通过调用服务器本地图片资源过于繁琐，管理图片也成了问题。<br>
+        <span style="color: #378de5">Mgek ImgHost</span>项目就诞生了，作为一个轻量级图床，图片保存于本地服务器并通过数据库索引，支持批量图片下载，直链提取，批量删除，缩略图生成，轻松处理本地上传图片的问题。
+        </p>
+        <img class="img" src="/store/imghost/demo1.jpg">
+        <li>全部项目</li>
+        <ul class="list" id="about">
+            {% for i in apps|list %}
+            <li><a href="/{{ i.href }}">{{ i.name }}</a><span style="margin-left: 15px">{{ i.span }}</span></li>
+            {% endfor %}
+        </ul>
+        <li>我</li>
+        <p>除了<span style="color: crimson">Mgek</span>，你还可以访问<strong>我的主页</strong><a href="http://lrenj.top">lrenj.top</a></p>
+        <p>博客: <a href="http://hub.lrenj.top/blog">Blog</a></p>
+        <p>在<a href="https://github.com/landers1037">GitHub</a>, <a href="http://juejin.im/user/5d540cffe51d45621512ad50">掘金</a>, <a>Stackoverflow</a>同样可以找到我，感谢你的关注！</p>
+        <p>如果觉得这里不错可以为我点亮一颗<span style="color: red">❤</span> <a href="http://lrenj.top/#ajax-zan">点赞</a></p>
+        <div class="footer text-center">
+            <p>©<a href="/">Mgek</a> ©<a href="http://lrenj.top">Landers</a></p>
+        </div>
+    </div>
+
+</div>
+</div>
+</body>
+</html>
